@@ -1,0 +1,7 @@
+SD.isSelfDivisor(128) true
+SD.isSelfDivisor(26) false
+SD.isSelfDivisor(10) false
+SD.isSelfDivisor(2) true
+
+SD.firstNumSelfDivisors(128, 4) [128, 132, 135, 144]
+SD.firstNumSelfDivisors(10, 3) [11, 12, 15]
