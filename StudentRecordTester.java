@@ -1,33 +1,22 @@
 
 /**
- * Write a description of class StudentRecordTester here.
+ * Tests possible scores from StudentRecord.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Emily Wilber
+ * @version November 13, 2018
  */
 public class StudentRecordTester
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
     /**
-     * Constructor for objects of class StudentRecordTester
-     */
-    public StudentRecordTester()
-    {
-        // initialise instance variables
-        x = 0;
-    }
-
-    /**
-     * An example of a method - replace this comment with your own
+     * Tests Student Record methods
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @param  scores  the values that the method is averaging
+     * @return    the correct average of the scores
      */
-    public int sampleMethod(int y)
+    public void tester(int[] scores)
     {
-        // put your code here
-        return x + y;
+        StudentRecord SR = new StudentRecord();
+        
+        System.out.println(SR.finalAverage());
     }
 }

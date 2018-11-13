@@ -20,7 +20,11 @@ public class StudentRecord
      */
     private double average(int first, int last)
     {
-        return 3;
+        double sum = 0.0;
+        for (int i = 0; i <= last; i++) {
+            sum += scores[i];
+        }
+        return sum/ (last - first + 1);
     }
 
     /**
@@ -31,6 +35,11 @@ public class StudentRecord
      */
     private boolean hasImproved()
     {
+        for (int i = 1; i < scores.length; i++) {
+            if (scores[i] > scores[i-1]) {
+                return false;
+            }
+        }
         return true;
     }
     
@@ -43,6 +52,11 @@ public class StudentRecord
      */
     public double finalAverage()
     {
-        return 3;
+        if (hasImproved()) {
+            return average(scores.length/2, scores.length);
+        }
+        else {
+            return average(0, scores.length-1);
+        }
     }
 }
