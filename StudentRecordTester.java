@@ -13,10 +13,11 @@ public class StudentRecordTester
      * @param  scores  the values that the method is averaging
      * @return    the correct average of the scores
      */
-    public void tester(int[] scores)
-    {
-        StudentRecord SR = new StudentRecord();
-        
-        System.out.println(SR.finalAverage());
+    public static void main(String[] args){
+        {
+            StudentRecord SR = new StudentRecord();
+            
+            System.out.println(SR.finalAverage());
+        }
     }
 }
