@@ -10,7 +10,7 @@
 public class StudentRecord
 {
     // contains the scores to be averaged
-    private int[] scores = {50, 50, 20, 80, 53};
+    private int[] scores = {20, 50, 50 ,53 , 80};
 
     /**
      * Returns the average of the values in scores
@@ -21,7 +21,7 @@ public class StudentRecord
     private double average(int first, int last)
     {
         double sum = 0.0;
-        for (int i = 0; i <= last; i++) {
+        for (int i = first; i <= last; i++) {
             sum += scores[i];
         }
         return sum/ (last - first + 1);
@@ -36,7 +36,7 @@ public class StudentRecord
     private boolean hasImproved()
     {
         for (int i = 1; i < scores.length; i++) {
-            if (scores[i] > scores[i-1]) {
+            if (scores[i] < scores[i-1]) {
                 return false;
             }
         }
