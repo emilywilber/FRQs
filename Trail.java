@@ -32,8 +32,8 @@ public class Trail
      */
     public boolean isLevelTrailSegment(int start, int end)
     {
-        int max = start;
-        int min = start;
+        int max = markers[start];
+        int min = markers[start];
         for (int i = start; i <= end; i++) {
             if (markers[i] > max) {
                 max = markers[i];
