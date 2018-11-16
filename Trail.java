@@ -1,17 +1,34 @@
 
 /**
- * Write a description of class Trail here.
+ * Information about a hiking trail is kept in a array. Each index in the array holds the elevation 
+ * at a point. 
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Emily Wilber
+ * @version November 16, 2018
  */
 public class Trail
 {
-    // instance variables - replace the example below with your own
+    /* Representation of the trail; the total number of markers is markers.length
+     */
+    
     private int[] markers = {100, 150, 105, 120, 90, 80, 50, 75, 75, 70, 80, 90, 100};
-
+    //private int[] markers = {10, 1000, 90, 80};
+    //private int[] markers = {10, 1000, 10, 1000};
     /**
-     * Constructor for objects of class Trail
+     * Determines if a trail segment is level. A trail segment is define by 
+     * a starting marker, an ending marker, and all markers between those two
+     * markers. 
+     * A trail segment is level if it has a difference between the maximum elevation 
+     * and minimum elevation that is less than or equal to 10 meters.
+     * 
+     * @param start  the index of the starting marker
+     * @param end    the index of the ending marker
+     *                Precondition: 0 <= start < end <= markers.length - 1
+     * 
+     * @return true  if the different between the maximum and minimum elevation
+     *               on this segment of the trail is less than or equal to 10 
+     *               meters;
+     *         false otherwise
      */
     public boolean isLevelTrailSegment(int start, int end)
     {
@@ -21,18 +38,23 @@ public class Trail
             if (markers[i] > max) {
                 max = markers[i];
             }
+            
             if (markers[i] < min) {
                 min = markers[i];
             }
         }
+        
         return (max-min <= 10);
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * Determines if this trail is rated difficult. A trail is rated by counting 
+     * the number of changes in elevation that are at least 30 meters (up or down)
+     * between two consecutive markers. A trail with 3 or more of such changes is 
+     * rated difficult.
+     * 
+     * @return true   if the trail is rated difficult
+     *         false  otherwise
      */
     public boolean isDifficult()
     {
