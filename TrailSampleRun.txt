@@ -1,0 +1,7 @@
+isLevelTrailSegment(7, 10) should be true: true
+isLevelTrailSegment(2, 12) should be false: false
+isLevelTrailSegment(0, 1) should be false: false
+
+isDifficult should be true: true
+isDifficult should be false: false
+isDifficult should be true: true
