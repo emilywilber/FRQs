@@ -10,8 +10,12 @@
 public class StudentRecord
 {
     // contains the scores to be averaged
-    private int[] scores = {20, 50, 50 ,53 , 80};
-
+    //the commented out arrays are other tests 
+    
+    
+    //private int[] scores = {50, 50, 20, 80, 53};
+    //private int[] scores = {20, 50, 50 ,53 , 80};
+    private int[] scores = {20, 50, 50, 80};
     /**
      * Returns the average of the values in scores
      * @param first  the starting point of the values to be averaged
@@ -53,7 +57,7 @@ public class StudentRecord
     public double finalAverage()
     {
         if (hasImproved()) {
-            return average(scores.length/2, scores.length);
+            return average(scores.length/2, scores.length - 1);
         }
         else {
             return average(0, scores.length-1);
