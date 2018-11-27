@@ -1,6 +1,6 @@
 
 /**
- * Write a description of class SoundTester here.
+ * tests Sound.
  *
  * @author Emily Wilber
  * @version November 20, 2018
@@ -16,8 +16,10 @@ public class SoundTester
         Sound S = new Sound();
         
         System.out.println(S.limitAmplitude(2000));
+        System.out.println(S.limitAmplitude(10));
+        
         S.trimSilenceFromBeginning();
-        System.out.println(S.samples);
+        System.out.println(Arrays.toString(int[] samples));
     }
 
 }

@@ -8,7 +8,8 @@
 public class Sound
 {
     //the array of values in this sound; guarenteed not to be null
-    private int[] samples = {40, 2532, 17, -2300, -17, -4000, 2000, 1048, -420, 33, 15, -32, 2030, 3223};
+    //private int[] samples = {40, 2532, 17, -2300, -17, -4000, 2000, 1048, -420, 33, 15, -32, 2030, 3223};
+    private int[] samples = {4, 10, 11, 100, -100, 0};
     
     /**
      * Changes those values in this sound that have an amplitude greater than limit.
