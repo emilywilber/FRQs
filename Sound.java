@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 /**
  * Write a description of class Sound here.
@@ -7,9 +8,10 @@
  */
 public class Sound
 {
-    //the array of values in this sound; guarenteed not to be null
-    //private int[] samples = {40, 2532, 17, -2300, -17, -4000, 2000, 1048, -420, 33, 15, -32, 2030, 3223};
-    private int[] samples = {4, 10, 11, 100, -100, 0};
+    private int[] samples;
+    public int[] Sound() {
+        return samples;
+    }
     
     /**
      * Changes those values in this sound that have an amplitude greater than limit.
@@ -45,20 +47,13 @@ public class Sound
      */
     public void trimSilenceFromBeginning() {
         int numzeros = 0;
-        int startingIndex = 0;
-        for (int i= 0; i < samples.length; i++) {
-            if (samples[i] == 0) {
-                numzeros++;
-            }
-            else {
-                startingIndex = i;
-                break;
-            }
+        while (samples[numzeros] == 0) {
+            numzeros++;
         }
         
         int[] noSilence = new int[samples.length - numzeros];
         for (int j = 0; j < noSilence.length; j++) {
-            noSilence[j] = samples[j+ numzeros];
+            noSilence[j] = samples[j + numzeros];
         }
         samples = noSilence;
     }
