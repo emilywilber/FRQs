@@ -11,12 +11,12 @@ public class Sound
     //the array of values in this sound; guarenteed not to be null
     private int[] samples;
     
-    public void setsamples(int[] inputsamples) {
-        this.samples = inputsamples;
-    }
-    
-    public int[] getsamples() {
-        return (this.samples);
+    /**
+     * Makes a copy of the original samples and puts it in a local variable
+     * @param inputSamples   the original array
+     */
+    public Sound(int[] inputSamples) {
+        this.samples = inputSamples;
     }
     
     /**
@@ -62,5 +62,12 @@ public class Sound
             noSilence[j] = samples[j + numzeros];
         }
         samples = noSilence;
+    }
+    
+    /**
+     * @return the current state of samples
+     */
+    public String toString() {
+        return "Sound: " + Arrays.toString(samples);   
     }
 }
