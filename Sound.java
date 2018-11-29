@@ -8,15 +8,21 @@ import java.util.Arrays;
  */
 public class Sound
 {
+    //the array of values in this sound; guarenteed not to be null
     private int[] samples;
-    public int[] Sound() {
-        return samples;
+    
+    public void setsamples(int[] inputsamples) {
+        this.samples = inputsamples;
+    }
+    
+    public int[] getsamples() {
+        return (this.samples);
     }
     
     /**
      * Changes those values in this sound that have an amplitude greater than limit.
      * Values greater than limit are changed to limit.
-     * Values less than -lmit are changed to -limit.
+     * Values less than -limit are changed to -limit.
      * @param limit   the amplitude limit
      *        Precondition: limit >= 0
      * @return the number of values in this sound that this method changed.
