@@ -1,3 +1,5 @@
+package selfDivisor;
+
 
 /**
  * Write a description of class SelfDivisor here.

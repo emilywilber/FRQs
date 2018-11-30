@@ -8,12 +8,17 @@
  */
 public class Trail
 {
-    /* Representation of the trail; the total number of markers is markers.length
-     */
+    //Representation of the trail; the total number of markers is markers.length
+    private int[] markers;
     
-    private int[] markers = {100, 150, 105, 120, 90, 80, 50, 75, 75, 70, 80, 90, 100};
-    //private int[] markers = {10, 1000, 90, 80};
-    //private int[] markers = {10, 1000, 10, 1000};
+    /**
+     * Makes markers accessable
+     * @param markers   the original array of heights
+     */
+    public Trail(int[] markers) {
+        this.markers = markers;
+    }
+    
     /**
      * Determines if a trail segment is level. A trail segment is define by 
      * a starting marker, an ending marker, and all markers between those two
