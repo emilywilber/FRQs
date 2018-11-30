@@ -1,15 +1,22 @@
+ 
+
 /**
  * Tests the battery charger
  *
  * @author Emily Wilber
  * @version November 1, 2018
  */
-public class tester
+public class batteryChargerTester
 {
-    public static void tester( )
+    public static void main(String[] args)
     {
-        batteryCharger BC = new batteryCharger();
-       
+        int[] rateTable = {50, 60, 160, 60, 80, 100, 100, 120, 
+                           150, 150, 150, 200, 40, 240, 220, 220, 
+                           200, 200, 180, 180, 140, 100, 80, 60};
+                
+        batteryCharger BC = new batteryCharger(rateTable);
+        
+        
         System.out.println(BC.getChargingCost(12, 1));
         System.out.println(BC.getChargingCost(0, 2));
         System.out.println(BC.getChargingCost(22, 7));

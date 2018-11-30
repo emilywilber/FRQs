@@ -1,3 +1,5 @@
+ 
+
 
 /**
  * Calculate a student's grade average except if the grades all improved.
@@ -9,13 +11,17 @@
  */
 public class StudentRecord
 {
-    // contains the scores to be averaged
-    //the commented out arrays are other tests 
     
+    private int[] scores;
     
-    //private int[] scores = {50, 50, 20, 80, 53};
-    //private int[] scores = {20, 50, 50 ,53 , 80};
-    private int[] scores = {20, 50, 50, 80};
+    /**
+     * Makes array scores accessable
+     * @param scores   the list of grades to be averaged
+     */
+    public StudentRecord(int[] scores) {
+        this.scores = scores;
+    }
+    
     /**
      * Returns the average of the values in scores
      * @param first  the starting point of the values to be averaged
