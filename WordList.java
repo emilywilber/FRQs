@@ -33,6 +33,7 @@ public class WordList
             String word = myList.get(i);
             if (word.length() == len) {
                 myList.remove(i);
+                i--;
             }
         }
     }
