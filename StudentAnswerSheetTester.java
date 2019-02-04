@@ -10,9 +10,11 @@ public class StudentAnswerSheetTester
 {
     public static void main(String[] args)
     {
-        ArrayList<String> paulAns = {"A", "B"};
+        ArrayList<String> paulAns;
+        paulAns.add("A");
         StudentAnswerSheet paul = new StudentAnswerSheet(paulAns, "Paul");
-        TestResults T = {paul};
+        TestResults T = new TestResults();
+        
         
     }
 }
