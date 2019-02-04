@@ -23,6 +23,10 @@ public class StudentAnswerSheetTester
         
         TestResults T = new TestResults();
         
-        
+        ArrayList<StudentAnswerSheet> students = new ArrayList<StudentAnswerSheet>();
+            students.add(paul);
+            
+            TestResults theClass = new TestResults(students);
+            System.out.println("Best: " + theClass.highestScoringStudent(key));
     }
 }

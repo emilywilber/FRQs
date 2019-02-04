@@ -10,7 +10,9 @@ public class TestResults
 {
     // instance variables - replace the example below with your own
     private ArrayList<StudentAnswerSheet> sheets; 
-
+    Public TestResults(ArrayList<String> s) {
+        
+    }
     /**
      * Precondition: sheets.size() > 0;
      *               all answer sheets in sheets have the same number of answers
